@@ -1,0 +1,79 @@
+.confirmation-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(9, 30, 66, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    backdrop-filter: blur(2px);
+}
+
+.confirmation-card {
+    background-color: var(--bg-primary);
+    padding: 24px;
+    border-radius: var(--radius-large);
+    border: 1px solid var(--border-soft);
+    box-shadow: var(--shadow-soft);
+    width: 90%;
+    max-width: 400px;
+    animation: slideIn 0.2s var(--transition-fast);
+}
+
+.confirmation-title {
+    margin: 0 0 12px 0;
+    color: var(--text-primary);
+    font-family: var(--font-title);
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.confirmation-text {
+    color: var(--text-secondary);
+    font-family: var(--font-main);
+    font-size: 1rem;
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+
+.confirmation-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.confirmation-actions button {
+    padding: 8px 18px;
+    border-radius: var(--radius-medium);
+    font-family: var(--font-main);
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: all var(--transition-fast);
+}
+
+.btn-secondary {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+    background-color: var(--border-main);
+}
+
+.btn-primary {
+    background-color: var(--blue-primary);
+    color: #FFFFFF;
+}
+
+.btn-primary:hover {
+    background-color: var(--blue-hover);
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: scale(0.98); }
+    to { opacity: 1; transform: scale(1); }
+}

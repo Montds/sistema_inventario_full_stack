@@ -1,0 +1,106 @@
+.reporte-container {
+    padding: 20px;
+    animation: fadeIn 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.table-wrapper {
+    border-radius: var(--radius-large);
+    overflow: hidden;
+    border: 2px solid #000000;
+    background-color: var(--bg-primary);
+    width: 100%;
+    max-width: 800px;
+}
+
+.reporte-table {
+    width: 100%;
+    border-collapse: collapse;
+    cursor: pointer;
+    font-family: var(--font-main);
+}
+
+.reporte-table th {
+    background-color: var(--blue-primary);
+    color: #FFFFFF;
+    text-align: left;
+    padding: 12px 15px;
+}
+
+.reporte-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--border-soft);
+}
+
+/* Estado normal de las filas y transición para el zoom */
+.reporte-table tbody tr {
+    transition: transform var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast);
+    position: relative;
+    z-index: 1;
+}
+
+/* Efecto hover para filas SIN alerta (Azul) */
+.reporte-table tbody tr:not(.row-warning):hover {
+    background-color: var(--blue-soft);
+    transform: scale(1.015);
+    z-index: 10;
+    box-shadow: var(--shadow-soft);
+}
+
+/* Efecto hover para filas CON alerta (Amarillo) */
+.row-warning {
+    background-color: rgba(255, 193, 7, 0.05);
+}
+
+.row-warning td {
+    font-weight: 600;
+}
+
+.row-warning:hover {
+    background-color: rgba(255, 171, 0, 0.15) !important;
+    transform: scale(1.015);
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(255, 171, 0, 0.2);
+}
+
+.icon-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.warning-svg {
+    width: 24px;
+    height: 24px;
+    animation: icon-blink 0.6s infinite alternate;
+    cursor: pointer;
+    user-select: none;
+}
+
+@keyframes icon-blink {
+    from {
+        fill: #ffc029;
+        opacity: 1;
+        filter: drop-shadow(0 0 1px #d1ac34);
+        transform: scale(1);
+    }
+    to {
+        fill: #FFC107;
+        opacity: 0.9;
+        filter: drop-shadow(0 0 12px #FFC107) drop-shadow(0 0 5px #FFB300);
+        transform: scale(1.15);
+    }
+}
+
+.loading-state {
+    text-align: center;
+    padding: 50px;
+    color: var(--text-light);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

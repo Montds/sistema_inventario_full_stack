@@ -1,0 +1,37 @@
+[
+  {
+    "nombre": "Laptop Asus VivoBook",
+    "sku": "PROD-2026-001",
+    "precio": 2500000,
+    "stockActual": 12,
+    "stockMinimo": 3
+  },
+  {
+    "nombre": "Mouse Inalámbrico Logitech",
+    "sku": "PROD-2026-002",
+    "precio": 85000,
+    "stockActual": 5,
+    "stockMinimo": 10
+  },
+  {
+    "nombre": "Monitor LG 27 Pulgadas",
+    "sku": "PROD-2026-003",
+    "precio": 950000,
+    "stockActual": 20,
+    "stockMinimo": 5
+  },
+  {
+    "nombre": "Teclado Mecánico Razer",
+    "sku": "PROD-2026-004",
+    "precio": 450000,
+    "stockActual": 15,
+    "stockMinimo": 5
+  },
+  {
+    "nombre": "Impresora HP LaserJet",
+    "sku": "PROD-2026-005",
+    "precio": 890000,
+    "stockActual": 8,
+    "stockMinimo": 2
+  }
+]
